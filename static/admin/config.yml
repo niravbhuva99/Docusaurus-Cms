@@ -1,0 +1,23 @@
+backend:
+    name: git-gateway
+    branch: main # Branch to update (optional; defaults to master)
+    # publish_mode: editorial_workflow
+media_folder: 'static/img' # Media files will be stored in the repo under images/uploads
+public_folder: /img
+local_backend: true
+node_bundler: 'esbuild'
+publish_mode: editorial_workflow
+collections:
+    - name: contribution
+      label: contribution
+      format: 'frontmatter'
+      folder: blog
+      extension: mdx
+      identifier_field: title
+      create: true
+      fields:
+          - { label: Title, name: title, widget: string, required: true }
+          - { label: tags, name: tags, widget: tags, required: false }
+          - { label: slug, name: slug, widget: slug, required: false }
+          - { label: sidebarposition, name: sidebarPosition, widget: sidebarPosition, required: false }
+          - { label: body, name: body, widget: mdx }

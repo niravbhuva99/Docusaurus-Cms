@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+    // "baseUrl": ".",
+    // "lib": ["DOM", "ES2021.String"],
+    "target": "es5",
+    "module": "esnext",
+    "jsx": "react",
+    "esModuleInterop": true,
+    "moduleResolution": "node",
+    "skipLibCheck": true,
+    "strict": true,
+    "allowSyntheticDefaultImports": true,
+    "noEmitOnError": false,
+    "types": [
+      "node",
+      "@docusaurus/module-type-aliases",
+      "@docusaurus/theme-classic"
+    ],
+    "outDir": "./dist",
+    "paths": { "react": ["./node_modules/@types/react"] },
+    "lib": ["es2021", "dom"],
+    "noImplicitAny": false
+  },
+  "include": ["./static/admin/customEditor/src/editor.tsx"]
+}
